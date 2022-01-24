@@ -1,0 +1,262 @@
+/*---------------------------------------------MAIN---------------------------------------------*/
+main.shop {
+  padding: 20px;
+}
+
+main.shop .section-shop {
+  margin-bottom: 40px;
+}
+
+/*---------------------------------------------HEADER---------------------------------------------*/
+main.shop .header-shop {
+  display: flex;
+  justify-content: space-between;
+}
+
+main.shop .header-shop .judul {
+  margin: 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+main.shop .header-shop .judul::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--black01);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+main.shop .header-shop #sortir {
+  height: max-content;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  background-color: var(--black01);
+  transition: var(--setengah);
+}
+
+main.shop .header-shop option {
+  padding: 10px 0;
+}
+
+/*---------------------------------------------CONTENT---------------------------------------------*/
+main.shop .content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+}
+
+main.shop .section-filter {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--black01);
+}
+
+/*---------------------------------------------PAGINATION---------------------------------------------*/
+main.shop .pagination {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+main.shop .pagination .pn {
+  padding: 5px;
+  color: var(--white);
+  background-color: var(--black06);
+}
+
+main.shop .pagination input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid var(--black03);
+  text-align: center;
+}
+
+main.shop .pagination input:focus {
+  outline: 0;
+}
+
+main.shop .pagination input::-webkit-inner-spin-button,
+main.shop .pagination input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/*---------------------------------------------FILTER---------------------------------------------*/
+main.shop #btn-filter {
+  display: none;
+}
+
+main.shop .head-filter {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+main.shop .head-filter i {
+  display: none;
+}
+
+main.shop .filter-shop ul {
+  list-style-type: none;
+}
+
+main.shop .filter-shop li {
+  padding: 0 0 0 20px;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-transform: capitalize;
+}
+
+main.shop .filter-shop li::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--black01);
+  position: absolute;
+  left: 0;
+}
+
+main.shop .filter-shop li.black-active::before {
+  background-color: var(--black);
+}
+
+main.shop .filter-shop a {
+  color: var(--black);
+}
+
+main.shop .filter-shop a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+main.shop .filter-shop a.red-active {
+  color: var(--red);
+}
+
+/*---------------------------------------------SEARCH---------------------------------------------*/
+main.shop .search-product .boxInput {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 10px;
+}
+
+main.shop .search-product #src-product {
+  background-color: var(--black01);
+  border: 0;
+  padding: 15px;
+  transition: var(--setengah);
+}
+
+main.shop .search-product #src-product:focus,
+main.shop .header-shop #sortir:focus {
+  outline: 0;
+  box-shadow: 0 0 4px 0.5px var(--black03);
+}
+
+main.shop .search-product .for,
+main.shop .filter-price button {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 15px 20px;
+  background-color: transparent;
+  color: var(--black06);
+  border: 1px solid var(--black06);
+  letter-spacing: 1px;
+  transition: var(--setengah);
+}
+
+main.shop .search-product .for {
+  letter-spacing: 1px;
+  border: 0;
+  color: var(--white);
+  background-color: var(--red);
+  line-height: 120%;
+}
+
+/*---------------------------------------------PRICE---------------------------------------------*/
+main.shop .filter-price .box-count-range {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main.shop .filter-price .range-count {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main.shop .filter-price .range-count span {
+  display: inherit;
+}
+
+main.shop .filter-price .range-count i {
+  margin: 5px 0;
+}
+
+/*---------------------------------------------CONTENT SHOP---------------------------------------------*/
+main.shop .content-shop {
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+main.shop .content-shop-1r {
+  grid-template-columns: 1fr !important;
+}
+
+main.shop .content-shop-1row {
+  grid-template-columns: 1fr !important;
+}
+
+main.shop .sell-box-bg {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/*---------------------------------------------ANIM NO RESULT---------------------------------------------*/
+main.shop .box-animNoResult {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main.shop .box-animNoResult p {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 120%;
+}
+
+main.shop .box-animNoResult .text {
+  white-space: nowrap;
+}
+
+main.shop .box-animNoResult #valNoResult {
+  text-transform: none;
+  color: var(--red);
+}
+
+main.shop #animNoResult {
+  width: 400px;
+}
+
+main.shop .box-anim-show {
+  display: flex !important;
+}
