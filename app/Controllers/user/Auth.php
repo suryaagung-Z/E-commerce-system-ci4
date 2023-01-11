@@ -182,7 +182,7 @@ class Auth extends BaseController
                 if ($this->dbUser->deleteCurrent($idFromCurrent, 'byId') <= 0) {
                     return redirect()->to('/auth')->with('popup', ['text' => '❌ Error:fail_em_02', 'bg' => 'popup-r']);
                 }
-                return redirect()->to('/auth')->with('popup', ['text' => '❌ Gagal mengirim code. Error:reg_03', 'bg' => 'popup-r']);
+                // return redirect()->to('/auth')->with('popup', ['text' => '❌ Gagal mengirim code. Error:reg_03', 'bg' => 'popup-r']);
             }
         } else {
             return redirect()->to('/auth')->withInput();
@@ -201,7 +201,7 @@ class Auth extends BaseController
             'protocol'   => 'smtp',
             'SMTPHost'   => 'smtp.gmail.com',
             'SMTPUser'   => 'suryaagungmix@gmail.com',
-            'SMTPPass'   => 'sury4gungm1x',
+            'SMTPPass'   => 'kczkdbyypzkwijno',
             'SMTPPort'   => 465,
             'SMTPCrypto' => 'ssl',
             'mailType'   => 'html',
@@ -217,6 +217,10 @@ class Auth extends BaseController
         $conEmail->setMessage('Klik untuk verifikasi akun <b>DIDOL.SHOP</b> <br>
                                PERHATIAN : Hiraukan saja jika merasa ini bukan anda<br><br>
         <a href="' . base_url('verify?email=' . $email . '&token=' . urlencode($token)) . '" style="letter-spacing: 2px; font-weight: 600; font-size: 0.8rem;"> KLIK </a>');
+
+        // Just Debug
+        // var_dump($conEmail->send());
+        // var_dump($conEmail->printDebugger());
 
         $send = $conEmail->send() ?  1 : 0;
         return $send;
